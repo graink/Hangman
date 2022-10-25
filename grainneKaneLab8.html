@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="grainneKaneLab8.css" />
+    <script defer src="grainneKaneLab8.js"></script>
+    <title>Hangman</title>
+</head>
+
+<body>
+<div class="container">
+    <h1>Hangman</h1>
+    <p>
+        Type your Guess out one Letter at a time
+    </p>
+    <div class="hint">HINT
+        <span class="hintText">THEME: COMPUTER SCIENCE</span>
+    </div>
+
+
+    <!--Displayed: hangman representing lives remaining in game-->
+
+    <div class="game-box">
+        <svg class="figure">
+            <!-- Stand -->
+            <line x1="25%" y1="5%" x2="65%" y2="5%" />
+            <line x1="65%" y1="5%" x2="65%" y2="20%" />
+            <line x1="25%" y1="5%" x2="25%" y2="95%" />
+            <line x1="5%" y1="95%" x2="45%" y2="95%" />
+
+            <!-- Head -->
+            <circle r="10%" cx="65%" cy="30%" class="body-part" />
+
+            <!-- Body -->
+            <line x1="65%" y1="40%" x2="65%" y2="60%" class="body-part" />
+
+            <!-- Arms -->
+            <line x1="50%" y1="40%" x2="65%" y2="50%" class="body-part" />
+            <line x1="80%" y1="40%" x2="65%" y2="50%" class="body-part" />
+
+            <!-- Legs -->
+            <line x1="65%" y1="60%" x2="80%" y2="70%" class="body-part" />
+            <line x1="65%" y1="60%" x2="50%" y2="70%" class="body-part" />
+        </svg>
+
+     <!--notifications/alerts-->
+
+        <div class="content">
+            <ul id="word" class="word"></ul>
+            <div id="incorrect" class="incorrect">
+                <h2>Incorrect Guesses:</h2>
+                <p></p>
+            </div>
+        </div>
+        <div id="backdrop" class="backdrop"></div>
+        <div id="final-msg" class="final-msg">
+            <p id="msg-info" class="msg-info"></p>
+            <button id="play" class="play">Play Again</button>
+        </div>
+        <div id="indication" class="indication">
+            <p>Oops! You have already entered this letter</p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
